@@ -67,6 +67,7 @@ class Solution:
             return 2
         else:
             return 0
+        a = lef
     
 
 
