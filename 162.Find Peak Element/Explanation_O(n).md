@@ -1,4 +1,4 @@
-# Find Peak Element
+# Find Peak Element O(n)
 
 做题前：
 
