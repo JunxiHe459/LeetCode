@@ -22,6 +22,31 @@
               return (1 + i) * i // 2
       ```
 
+3. ```python
+   # Binary Search is much better
+   class Solution:
+       def arrangeCoins(self, n: int) -> int:
+           if n < 2:
+               return n
+           
+           left = 0
+           right = n - 1
+           while left <= right:
+               mid = left + (right - left) // 2
+               curr = (1 + mid) * mid // 2
+               
+               if curr == n:
+                   return mid
+               elif n < curr:
+                   right = mid - 1
+               else:
+                   left = mid + 1
+           return right
+           
+   ```
+
+4. 
+
 做题后：
 
 1.  
