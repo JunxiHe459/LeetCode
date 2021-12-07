@@ -24,7 +24,18 @@
            return result >> 1
    ```
 
+2. 代码比 1 更加清晰
 
+   ```python
+   class Solution:
+       def getDecimalValue(self, head: ListNode) -> int:
+           result = head.val
+           while head.next:
+               result = result << 1
+               head = head.next
+               result += head.val
+           return result
+   ```
 
 做题后：
 
