@@ -55,6 +55,37 @@
            return not rev
    ```
 
+3. Go Implementation
+
+   ```go
+   func isPalindrome(head *ListNode) bool {
+       fast := head
+       slow := head
+       var rev *ListNode
+       
+       for fast != nil && fast.Next != nil {
+           fast = fast.Next.Next
+           
+           next := slow.Next
+           slow.Next = rev
+           rev = slow
+           slow = next
+       }
+       
+       // If the linked list has odd number of nodes
+       if fast != nil {
+           slow = slow.Next
+       }
+       
+       for rev != nil && rev.Val == slow.Val {
+           rev = rev.Next
+           slow = slow.Next
+       }
+       
+       return rev == nil
+   }
+   ```
+
    
 
 做题后：
