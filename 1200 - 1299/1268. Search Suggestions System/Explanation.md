@@ -53,9 +53,11 @@
            hi = len(array)
    
            while lo < hi:
-               mid = (lo + hi) //2
-               if array[mid] < target: lo = mid + 1
-               else: hi = mid
+               mid = (lo + hi) // 2
+               if array[mid] < target: 
+                   lo = mid + 1
+               else: 
+                   hi = mid
            return lo
        
    ```
